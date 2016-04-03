@@ -1,0 +1,12 @@
+{
+	"name": "oniguruma-comment",
+	"version": "1.0.0",
+	"description": "Highlighting for Oniguruma-regex comments",
+	"keywords": ["Oniguruma", "TextMate", "RegEx", "Regular Expression", "Comment", "Highlighting", "Grammar", "Syntax", "Language"],
+	"repository": "https://github.com/Alhadis/oniguruma-comment",
+	"license": "ISC",
+	"engines": {
+		"atom": "*"
+	},
+	"dependencies": {}
+}

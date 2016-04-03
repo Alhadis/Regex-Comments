@@ -1,0 +1,18 @@
+name: "Oniguruma Comment"
+scopeName: "text.oniguruma-comment"
+fileTypes: []
+injectionSelector: "string"
+tests:
+	quotedDouble: " (?# Comment) "
+	multiline: """
+		Text (?# Comment) Text
+	"""
+patterns: [{
+	begin: "\\(\\?#"
+	end: "\\)"
+	name: "comment.block.oniguruma"
+	patterns: [{
+		match: "\\\\."
+		name: "constant.escape.backslash.oniguruma"
+	}]
+}]
