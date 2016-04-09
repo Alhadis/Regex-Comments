@@ -3,8 +3,9 @@ scopeName: "text.oniguruma-comment"
 fileTypes: []
 injectionSelector: "string"
 tests:
-	quotedDouble: " (?# Comment) "
+	quotedDouble: " (?# Comment) #aa "
 	multiline: """
+		
 		Text (?# Comment) Text
 	"""
 patterns: [{
@@ -15,4 +16,8 @@ patterns: [{
 		match: "\\\\."
 		name: "constant.escape.backslash.oniguruma"
 	}]
+}, {
+	name:  "comment-ish.line.oniguruma"
+	begin: "(?<=\\s)#(?=\\s*[^\\]]+$)"
+	end:   "$|(?=[\"'])"
 }]
