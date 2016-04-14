@@ -47,3 +47,11 @@ So this wouldn't match the entire comment:
 	(?=something-complex) # Yes, "complex" indeed
 """
 ```
+
+**TIP:**
+Use directional quotes instead.
+```coffee
+"""(?x)
+	# “That’s a decent compromise, I guess.”
+"""
+```
