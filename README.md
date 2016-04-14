@@ -12,7 +12,7 @@ patterns:
 ```
 The above snippet would be rendered like this:
 
-<img width="236" src="https://raw.githubusercontent.com/Alhadis/oniguruma-comment/static/preview-1.png"/>
+<img width="236" src="https://raw.githubusercontent.com/Alhadis/Regex-Comments/static/preview-1.png"/>
 
 Geared toward authors of [TextMate-compatible grammars](http://manual.macromates.com/en/language_grammars).
 
@@ -31,7 +31,7 @@ If you'd like to restrict it to specific languages only, just use your styleshee
 
 "Probable" comment-lines
 ------------------------
-<img width="467" src="https://raw.githubusercontent.com/Alhadis/oniguruma-comment/static/preview-2.png"/>
+<img width="467" src="https://raw.githubusercontent.com/Alhadis/Regex-Comments/static/preview-2.png"/>
 
 More basic comments are supported, but only under very specific circumstances:
 
