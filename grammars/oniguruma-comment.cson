@@ -19,5 +19,5 @@ patterns: [{
 }, {
 	name:  "comment-ish.line.oniguruma"
 	begin: "(?<=\\s)#(?=\\s*[^\\]]+$)"
-	end:   "$|(?=[\"'])"
+	end:   "$|(?=[\"'`])"
 }]
