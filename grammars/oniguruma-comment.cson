@@ -18,6 +18,6 @@ patterns: [{
 	}]
 }, {
 	name:  "comment-ish.line.oniguruma"
-	begin: "(?<=\\s)#(?=\\s*[^\\]]+$)"
+	begin: "(?<=\\s|^)#"
 	end:   "$|(?=[\"'`])"
 }]
