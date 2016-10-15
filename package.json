@@ -1,6 +1,6 @@
 {
 	"name": "regex-comments",
-	"version": "1.1.1",
+	"version": "1.1.2",
 	"description": "Atom highlighting for Oniguruma-regex comments",
 	"keywords": ["Oniguruma", "TextMate", "RegEx", "Regular Expression", "Comment", "Highlighting", "Grammar", "Syntax", "Language"],
 	"repository": "https://github.com/Alhadis/Regex-Comments",

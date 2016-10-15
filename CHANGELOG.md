@@ -4,6 +4,15 @@ Change Log
 This project adheres to [Semantic Versioning](http://semver.org).
 
 
+[v1.1.2]
+------------------------------------------------------------------------
+**October 16th, 2016**  
+Minor improvements made to "probable" comment matching:
+
+* Comments can now be matched at the start of a line without whitespace
+* Pointless lookahead removed to enable matching of lines containing `]`
+
+
 [v1.1.1]
 ------------------------------------------------------------------------
 **September 3rd, 2016**  
@@ -30,6 +39,7 @@ Initial release. Adds highlighting support for Oniguruma-regex comments.
 
 
 [Referenced links]:_____________________________________________________
+[v1.1.2]: https://github.com/Alhadis/Regex-Comments/releases/tag/v1.1.2
 [v1.1.1]: https://github.com/Alhadis/Regex-Comments/releases/tag/v1.1.1
 [v1.1.0]: https://github.com/Alhadis/Regex-Comments/releases/tag/v1.1.0
 [v1.0.0]: https://github.com/Alhadis/Regex-Comments/releases/tag/v1.0.0
