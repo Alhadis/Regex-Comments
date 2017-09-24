@@ -1,0 +1,5 @@
+tests:
+	quotedDouble: " (?# Comment) #aa "
+	multiline: """
+		Text (?# Comment) Text
+	"""

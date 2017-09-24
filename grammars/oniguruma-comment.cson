@@ -1,22 +1,19 @@
-name: "Oniguruma Comment"
 scopeName: "text.oniguruma-comment"
-fileTypes: []
 injectionSelector: "string"
-tests:
-	quotedDouble: " (?# Comment) #aa "
-	multiline: """
-		
-		Text (?# Comment) Text
-	"""
 patterns: [{
-	begin: "\\(\\?#"
-	end: "\\)"
-	name: "comment.block.oniguruma"
+	name:  "comment.block.oniguruma"
+	begin: "(\\()(\\?#)"
+	end:   "\\)"
+	beginCaptures:
+		1: name: "punctuation.section.expression.begin.round.bracket.oniguruma"
+		2: name: "punctuation.definition.comment.block.oniguruma"
+	endCaptures:
+		0: name: "punctuation.section.expression.end.round.bracket.oniguruma"
 	patterns: [{
 		match: "\\\\."
 		name: "constant.escape.backslash.oniguruma"
 	}]
-}, {
+},{
 	name:  "comment-ish.line.oniguruma"
 	begin: "(?<=\\s|^)#"
 	end:   "$|(?=[\"'`])"
