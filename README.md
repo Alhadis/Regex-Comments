@@ -50,11 +50,6 @@ So this wouldn't match the entire comment:
 
 **TIP:**
 Use directional quotes instead.
-Insert them into a "probable" comment-line with the following snippets:
-
-* [`dq`]   Double quotes: `“”`
-* [`sq`]   Single quotes: `‘’`
-* [`apos`] Apostrophe: `’`
 
 ```coffee
 """(?x)
