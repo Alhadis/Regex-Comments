@@ -4,8 +4,11 @@ Change Log
 This project adheres to [Semantic Versioning](http://semver.org).
 
 
-[Staged]
+[v2.0.0]
 ------------------------------------------------------------------------
+**October 20th, 2017**  
+"Probable" comment-matching replaced with actual comment highlighting.
+
 __Added:__  
 * Proper highlighting for `#`-prefixed comments, but only inside strings
 that start with an extended expression flag: `(?x)`
@@ -54,7 +57,8 @@ Initial release. Adds highlighting support for Oniguruma-regex comments.
 
 
 [Referenced links]:_____________________________________________________
-[Staged]: http://github.com/Alhadis/Regex-Comments/compare/v1.1.2...HEAD
+[Staged]: http://github.com/Alhadis/Regex-Comments/compare/v2.0.0...HEAD
+[v2.0.0]: https://github.com/Alhadis/Regex-Comments/releases/tag/v2.0.0
 [v1.1.2]: https://github.com/Alhadis/Regex-Comments/releases/tag/v1.1.2
 [v1.1.1]: https://github.com/Alhadis/Regex-Comments/releases/tag/v1.1.1
 [v1.1.0]: https://github.com/Alhadis/Regex-Comments/releases/tag/v1.1.0
