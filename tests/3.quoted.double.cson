@@ -43,4 +43,8 @@
 		nnn # nnn ""
 		nnn
 	"""
+	"(?x)
+	nnn(?=\\\\[\"#n]nn)nnn#yyy"
+	"""(?x)
+	nnn(?=\\\\[\'#n]nn)nnn#yyy"""
 ]

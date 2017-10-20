@@ -12,9 +12,8 @@ patterns: [{
 		)
 		(?=[imWDSP]*(?:-[imWDSP]*)?\\))
 	"""
-	end: "(?:\\G|^).*?(?=''')"
-	endCaptures: 0: patterns: [include: "#comment"]
-	patterns:                 [include: "#comment"]
+	end: "(?<!\\\\)(?=''')"
+	patterns: [include: "#innards"]
 },{
 	begin: """(?x)
 		# Normal string ('Single-quotes')
@@ -27,9 +26,8 @@ patterns: [{
 		)
 		(?=[imWDSP]*(?:-[imWDSP]*)?\\))
 	"""
-	end: "(?:\\G|^)(?:[^'\\\\]|\\\\.)*(?=')"
-	endCaptures: 0: patterns: [include: "#comment"]
-	patterns:                 [include: "#comment"]
+	end: "(?<!\\\\)(?=')"
+	patterns: [include: "#innards"]
 }]
 
 repository:
@@ -39,9 +37,22 @@ repository:
 		end:   "$|(?=')"
 		beginCaptures:
 			0: name: "punctuation.definition.comment"
+		patterns: [include: "#escape"]
+
+	escape:
+		name: "constant.character.escape.backslash"
+		match: "(\\\\)."
+		captures:
+			1: name: "punctuation.definition.escape.backslash"
+
+	innards:
 		patterns: [
-			name: "constant.character.escape.backslash"
-			match: "(\\\\)."
-			captures:
-				1: name: "punctuation.definition.escape.backslash"
+			{include: "#escape"}
+			{include: "#charClass"}
+			{include: "#comment"}
 		]
+
+	charClass:
+		begin: "(?<![^\\\\]\\\\)\\["
+		end:   "(?<![^\\\\]\\\\)\\]|(?=')"
+		patterns: [include: "#escape"]
