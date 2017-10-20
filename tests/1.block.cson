@@ -1,0 +1,17 @@
+[
+	"nnn (?# yyy) #nnn"
+	"""
+		nnn (?# yyy) nnn
+	"""
+	"""
+		nnn (?# yyy
+		yyy  \" yyy
+		) nnn
+	"""
+	/nnn # nnn/
+	/nnn (?x yyy) nnn/
+	///
+	nnn (?# yyy)
+	nnn
+	///
+]

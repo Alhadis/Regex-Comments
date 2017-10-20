@@ -6,15 +6,17 @@ This project adheres to [Semantic Versioning](http://semver.org).
 
 [Staged]
 ------------------------------------------------------------------------
-* Deleted unused metadata from grammar source. This will stop it showing
-up in the languge selection list once [`grammar-selector@v0.49.6`][1] is
-shipped in a stable Atom release. See [`atom/grammar-selector#34`][2].
-* Deleted snippets added in [v1.1.0][]. Their usefulness is limited, and
-are more likely to shadow another snippets with a similar prefix.
+__Added:__  
+* Proper highlighting for `#`-prefixed comments, but only inside strings
+that start with an extended expression flag: `(?x)`
 
+__Removed:__
+* Unused metadata from grammar source. This hides it from Atom's grammar
+selection menu. Refer to [`atom/grammar-selector#34`][1] for more info.
 
-[1]: https://github.com/atom/grammar-selector/tree/v0.49.6
-[2]: https://github.com/atom/grammar-selector/pull/34
+* Anything related to `comment-ish` scope. It was a clumsy hack.
+
+[1]: https://github.com/atom/grammar-selector/pull/34
 
 
 [v1.1.2]

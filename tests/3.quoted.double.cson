@@ -1,0 +1,46 @@
+[
+	"nnn # nnn"
+	"(?x) nnn # yyy"
+	"(?x) nnn \# nnn"
+	"(?x) nnn \\# nnn"
+	"(?x)
+		nnn # yyy \" yyy
+		nnn
+	"
+	"nnn # nnn"
+	"nnn \# nnn"
+	"nnn \\# nnn"
+	"
+		nnn # nnn \"
+		nnn
+	"
+	"""(?x nnn # nnn """
+	"""(?x nnn \# nnn """
+	"""(?x nnn \\# nnn """
+	"""(?x
+		nnn # nnn ""
+		nnn
+	"""
+	"""(?x) nnn # yyy """
+	"""(?x) nnn \# nnn """
+	"""(?x) nnn \\# nnn """
+	"""(?x)
+		nnn # yyy ""
+		nnn # yyy \" yyy
+		nnn
+	"""
+	""" nnn # nnn """
+	""" nnn \# nnn """
+	""" nnn \\# nnn """
+	"""
+		nnn # nnn ""
+		nnn
+	"""		
+	"""(?x nnn # nnn """
+	"""(?x nnn \# nnn """
+	"""(?x nnn \\# nnn """
+	"""(?x
+		nnn # nnn ""
+		nnn
+	"""
+]

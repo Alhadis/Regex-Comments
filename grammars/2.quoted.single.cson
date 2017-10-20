@@ -1,0 +1,47 @@
+scopeName: "injection.regex-comment.2"
+injectionSelector: "string.quoted.single"
+patterns: [{
+	begin: """(?x)
+		# Triple-quoted string ('Heredoc')
+		(?<=
+		  ''' \\( \\? x
+		| ''' \\( \\? x (?:  i|m  )
+		| ''' \\( \\? x (?: im|mi )
+		| ''' \\( \\? (?:    i|m  ) x
+		| ''' \\( \\? (?:   im|mi ) x
+		)
+		(?=[imWDSP]*(?:-[imWDSP]*)?\\))
+	"""
+	end: "(?:\\G|^).*?(?=''')"
+	endCaptures: 0: patterns: [include: "#comment"]
+	patterns:                 [include: "#comment"]
+},{
+	begin: """(?x)
+		# Normal string ('Single-quotes')
+		(?<=
+		  ' \\( \\? x
+		| ' \\( \\? x (?:  i|m  )
+		| ' \\( \\? x (?: im|mi )
+		| ' \\( \\? (?:    i|m  ) x
+		| ' \\( \\? (?:   im|mi ) x
+		)
+		(?=[imWDSP]*(?:-[imWDSP]*)?\\))
+	"""
+	end: "(?:\\G|^)(?:[^'\\\\]|\\\\.)*(?=')"
+	endCaptures: 0: patterns: [include: "#comment"]
+	patterns:                 [include: "#comment"]
+}]
+
+repository:
+	comment:
+		name:  "comment.line.number-sign"
+		begin: "(?<!\\\\)#"
+		end:   "$|(?=')"
+		beginCaptures:
+			0: name: "punctuation.definition.comment"
+		patterns: [
+			name: "constant.character.escape.backslash"
+			match: "(\\\\)."
+			captures:
+				1: name: "punctuation.definition.escape.backslash"
+		]
