@@ -8,5 +8,7 @@
 	"engines": {
 		"atom": "*"
 	},
-	"dependencies": {}
+	"atomTestRunner": "atom-mocha",
+	"dependencies": {},
+	"devDependencies": {"atom-mocha": "*"}
 }

@@ -1,0 +1,3 @@
+--should
+--spec-pattern /\.js$/
+--slow 9999

@@ -1,0 +1,11 @@
+[
+	"nnn (?# yyy) #nnn",
+	"""
+		nnn (?# yyy) nnn
+	""",
+	"""
+		nnn (?# yyy
+		yyy  \" yyy
+		) nnn
+	"""
+]
