@@ -10,5 +10,7 @@
 	},
 	"atomTestRunner": "atom-mocha",
 	"dependencies": {},
-	"devDependencies": {"atom-mocha": "*"}
+	"devDependencies": {
+		"atom-mocha": "^2.2.0"
+	}
 }

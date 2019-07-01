@@ -24,12 +24,12 @@ describe("Token scopes", () => {
 		
 		it(`tokenises ${name}`, async () => open(path).then(async editor => {
 			editor.scan(/n+/g, match => {
-				const pos = match.computedRange.start;
+				const pos = match.range.start;
 				const {scopes} = editor.tokenForBufferPosition(pos);
 				expect(grep(/^comment\./, scopes)).to.be.null;
 			});
 			editor.scan(/y+/g, match => {
-				const pos = match.computedRange.start;
+				const pos = match.range.start;
 				const {scopes} = editor.tokenForBufferPosition(pos);
 				expect(grep(/^comment\./, scopes)).to.be.a("string");
 			});
